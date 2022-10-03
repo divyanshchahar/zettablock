@@ -17,22 +17,24 @@ function ApiItem(params) {
       </div>
 
       {/* TABLE */}
-      <table>
-        <tr>
-          <th>property</th>
-          <th>value</th>
-        </tr>
+      {isVisible && (
+        <table>
+          <tr>
+            <th>property</th>
+            <th>value</th>
+          </tr>
 
-        {/* TABLE ROWS */}
-        {items.map((item) => {
-          return (
-            <tr>
-              <td>{item[0].toString()}</td>
-              <td>{item[1].toString()}</td>
-            </tr>
-          );
-        })}
-      </table>
+          {/* TABLE ROWS */}
+          {items.map((item) => {
+            return (
+              <tr>
+                <td>{item[0].toString()}</td>
+                <td>{item[1].toString()}</td>
+              </tr>
+            );
+          })}
+        </table>
+      )}
     </>
   );
 }
