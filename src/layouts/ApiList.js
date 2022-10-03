@@ -38,6 +38,28 @@ function ApiLists(params) {
           <p>{isError}</p>
         </div>
       )}
+      {/* LISTING API RETURN */}
+      {apis &&
+        apis.map((item) => {
+          let isHidden = false;
+
+          const parentFunc = (showComponent) => {
+            isHidden = !isHidden;
+            showComponent(isHidden);
+          };
+
+          const propArgs = {
+            apiItem: item,
+            name: item.name,
+            hidingFunc: parentFunc,
+          };
+
+          return (
+            <div key={item.id}>
+              <ApiItem props={propArgs} />
+            </div>
+          );
+        })}
     </>
   );
 }
