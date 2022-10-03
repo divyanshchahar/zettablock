@@ -12,6 +12,9 @@ function FetchAPiData(params) {
         params.loadingFunc(false);
         params.stateFunc(data);
       }
+    })
+    .catch((error) => {
+      params.errorFunc(`Error!${error}`);
     });
 }
 
