@@ -1,5 +1,15 @@
+//IMPORTING COMPONENTS
+import ApiList from "../layouts/ApiList";
+
+//IMPORTING ASSETS
+import Urls from "../assets/Urls";
+
 function MainPage() {
-  return <div></div>;
+  return (
+    <>
+      <ApiList props={Urls.baseApi} />
+    </>
+  );
 }
 
 export default MainPage;
