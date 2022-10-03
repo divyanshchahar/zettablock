@@ -1,7 +1,12 @@
-import React from "react";
+// IMPORTING FUNCTIONALITY
+import { useState } from "react";
 
-function ApiList() {
+function ApiLists(params) {
+  const [apis, setApis] = useState();
+  const [isError, setisError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
   return <div></div>;
 }
 
-export default ApiList;
+export default ApiLists;
