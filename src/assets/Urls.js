@@ -1,7 +1,7 @@
 const Urls = {
-  baseApi: "https://62a6bb9697b6156bff7e6251.mockapi.io/v1/apis/",
-  asc: "https://62a6bb9697b6156bff7e6251.mockapi.io/v1/apis/?sortBy=name&order=asc",
-  dsc: "https://62a6bb9697b6156bff7e6251.mockapi.io/v1/apis/?sortBy=name&order=desc",
+  baseApi: "https://6339a12066857f698fb934c2.mockapi.io/testingAPi/fakeApi",
+  asc: "https://6339a12066857f698fb934c2.mockapi.io/testingAPi/fakeApi/?sortBy=name&order=asc",
+  dsc: "https://6339a12066857f698fb934c2.mockapi.io/testingAPi/fakeApi/?sortBy=name&order=desc",
 };
 
 export default Urls;
