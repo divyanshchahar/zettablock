@@ -1,5 +1,6 @@
 //IMPORTING COMPONENTS
 import ApiList from "../layouts/ApiList";
+import SortingMenu from "../layouts/SortingMenu";
 
 //IMPORTING ASSETS
 import Urls from "../assets/Urls";
@@ -7,7 +8,8 @@ import Urls from "../assets/Urls";
 function MainPage() {
   return (
     <>
-      <ApiList props={Urls.baseApi} />
+      <SortingMenu />
+      <ApiList props={Urls.dsc} />
     </>
   );
 }
