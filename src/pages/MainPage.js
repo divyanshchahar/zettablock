@@ -1,3 +1,6 @@
+// IMPORTing FUNCTIONALITY
+import { useState } from "react";
+
 //IMPORTING COMPONENTS
 import ApiList from "../layouts/ApiList";
 import SortingMenu from "../layouts/SortingMenu";
@@ -6,10 +9,17 @@ import SortingMenu from "../layouts/SortingMenu";
 import Urls from "../assets/Urls";
 
 function MainPage() {
+  const [sorting, setSorting] = useState(Urls.dsc);
+  const propArgs = { sortingFunc: changeSorting, sortOptions: Urls };
+
+  function changeSorting(param) {
+    setSorting(param);
+  }
+
   return (
     <>
-      <SortingMenu />
-      <ApiList props={Urls.dsc} />
+      <SortingMenu props={propArgs} />
+      <ApiList props={sorting} />
     </>
   );
 }
