@@ -3,12 +3,29 @@ import { useState } from "react";
 // IMPORTING ASSETS
 import downArrow from "../assets/downward-arrow.png";
 
-function SortingMenu() {
+function SortingMenu(params) {
   const [selectedOption, setSelectedOption] = useState("Default");
   const [showOptions, setShowOptions] = useState(false);
 
   function handleClick(sortBy) {
     setSelectedOption(sortBy);
+
+    switch (sortBy) {
+      case "Default":
+        params.props.sortingFunc(params.props.sortOptions.baseApi);
+        break;
+
+      case "Name: Ascending":
+        params.props.sortingFunc(params.props.sortOptions.asc);
+        break;
+
+      case "Name: Descending":
+        params.props.sortingFunc(params.props.sortOptions.dsc);
+        break;
+
+      default:
+        break;
+    }
   }
 
   return (
