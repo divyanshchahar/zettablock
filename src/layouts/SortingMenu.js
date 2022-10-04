@@ -7,6 +7,10 @@ function SortingMenu() {
   const [selectedOption, setSelectedOption] = useState("Default");
   const [showOptions, setShowOptions] = useState(false);
 
+  function handleClick(sortBy) {
+    setSelectedOption(sortBy);
+  }
+
   return (
     <div>
       <div>
@@ -21,9 +25,27 @@ function SortingMenu() {
       </div>
       {showOptions && (
         <div>
-          <div>Default</div>
-          <div>Name: Ascending</div>
-          <div>Name: Descending</div>
+          <div
+            onClick={() => {
+              handleClick("Default");
+            }}
+          >
+            Default
+          </div>
+          <div
+            onClick={() => {
+              handleClick("Name: Ascending");
+            }}
+          >
+            Name: Ascending
+          </div>
+          <div
+            onClick={() => {
+              handleClick("Name: Descending");
+            }}
+          >
+            Name: Descending
+          </div>
         </div>
       )}
     </div>
