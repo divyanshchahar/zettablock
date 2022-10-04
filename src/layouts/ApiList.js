@@ -21,7 +21,7 @@ function ApiLists(params) {
 
   useEffect(() => {
     FetchAPiData(propArgs);
-  }, []);
+  }, [url]);
 
   return (
     <>
