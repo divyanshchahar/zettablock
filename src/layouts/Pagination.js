@@ -1,6 +1,7 @@
-import React from "react";
+//IMPORTING ASSETS
+import Urls from "../assets/Urls";
 
-function Pagination() {
+function Pagination(params) {
   return (
     <div>
       <button>1</button>
