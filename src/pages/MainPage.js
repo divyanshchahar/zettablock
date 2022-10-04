@@ -9,7 +9,7 @@ import SortingMenu from "../layouts/SortingMenu";
 import Urls from "../assets/Urls";
 
 function MainPage() {
-  const [sorting, setSorting] = useState(Urls.dsc);
+  const [sorting, setSorting] = useState(Urls.baseApi);
   const propArgs = { sortingFunc: changeSorting, sortOptions: Urls };
 
   function changeSorting(param) {
