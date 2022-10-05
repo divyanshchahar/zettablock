@@ -1,5 +1,6 @@
 const Urls = {
   baseApi: "https://6339a12066857f698fb934c2.mockapi.io/testingAPi/fakeApi",
+  noSrot: null,
   asc: "?sortBy=name&order=asc",
   dsc: "?sortBy=name&order=desc",
   p1: "?page=1&limit=10",
