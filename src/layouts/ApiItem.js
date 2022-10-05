@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 //IMPORTING COMPONENTS
-import DeleteApiData from "../utils/DeleteApiData";
+import DeleteCall from "../utils/DeleteCall";
 
 //IMPORTING ASSETS
 import Urls from "../assets/Urls";
@@ -23,7 +23,7 @@ function ApiItem(params) {
       </div>
       <button
         onClick={() => {
-          DeleteApiData(`${Urls.baseApi}/${params.props.apiItem.id}`);
+          DeleteCall(`${Urls.baseApi}/${params.props.apiItem.id}`);
         }}
       >
         Delete
