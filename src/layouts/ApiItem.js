@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 //IMPORTING COMPONENTS
-import DeleteCall from "../utils/DeleteCall";
+import DeleteApiData from "../utils/DeleteApiData";
 
 //IMPORTING ASSETS
 import Urls from "../assets/Urls";
@@ -10,6 +10,12 @@ import Urls from "../assets/Urls";
 function ApiItem(params) {
   const items = Object.entries(params.props.apiItem);
   const [isVisible, setIsVisible] = useState(false);
+
+  const deleteProps = {
+    id: params.props.apiItem.id,
+    stateVar: params.props.stateVar,
+    stateFunc: params.props.stateFunc,
+  };
 
   return (
     <>
@@ -23,7 +29,8 @@ function ApiItem(params) {
       </div>
       <button
         onClick={() => {
-          DeleteCall(`${Urls.baseApi}/${params.props.apiItem.id}`);
+          DeleteApiData(deleteProps);
+          console.log("clicked");
         }}
       >
         Delete
