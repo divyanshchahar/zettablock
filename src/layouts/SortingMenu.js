@@ -12,7 +12,7 @@ function SortingMenu(params) {
 
     switch (sortBy) {
       case "Default":
-        params.props.sortingFunc(params.props.sortOptions.baseApi);
+        params.props.sortingFunc(params.props.sortOptions.noSort);
         break;
 
       case "Name: Ascending":

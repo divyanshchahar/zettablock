@@ -10,8 +10,8 @@ import Pagination from "../layouts/Pagination";
 import Urls from "../assets/Urls";
 
 function MainPage() {
-  const [sorting, setSorting] = useState(Urls.baseApi);
-  const [page, setPage] = useState(Urls.baseApi);
+  const [sorting, setSorting] = useState(Urls.noSort);
+  const [page, setPage] = useState(Urls.p1);
 
   function changeSorting(param) {
     setSorting(param);
@@ -27,7 +27,7 @@ function MainPage() {
   return (
     <>
       <SortingMenu props={sortingPropArgs} />
-      <ApiList props={sorting} />
+      <ApiList props={`${Urls.baseApi}${sorting}`} />
       <Pagination props={pagePropArgs} />
     </>
   );
