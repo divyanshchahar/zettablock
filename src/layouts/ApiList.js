@@ -12,6 +12,7 @@ function ApiLists(params) {
   const [isLoading, setIsLoading] = useState(true);
 
   const url = params.props;
+
   const propArgs = {
     url: url,
     loadingFunc: setIsLoading,
@@ -52,6 +53,8 @@ function ApiLists(params) {
             apiItem: item,
             name: item.name,
             hidingFunc: parentFunc,
+            stateVar: apis,
+            stateFunc: setApis,
           };
 
           return (

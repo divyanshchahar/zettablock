@@ -1,9 +1,13 @@
+import DeleteApiVar from "./DeleteApiVar";
+import DeleteCall from "./DeleteCall";
+
 function DeleteApiData(params) {
-  // console.log(params);
-  fetch(params, {
-    method: "DELETE",
-    headers: { "content-type": "application/json" },
-  }).then((res) => console.log(res));
+  DeleteCall(params.id);
+  DeleteApiVar({
+    stateVar: params.stateVar,
+    stateFunc: params.stateFunc,
+    id: params.id,
+  });
 }
 
 export default DeleteApiData;

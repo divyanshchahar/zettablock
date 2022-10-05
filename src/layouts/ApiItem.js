@@ -11,6 +11,12 @@ function ApiItem(params) {
   const items = Object.entries(params.props.apiItem);
   const [isVisible, setIsVisible] = useState(false);
 
+  const deleteProps = {
+    id: params.props.apiItem.id,
+    stateVar: params.props.stateVar,
+    stateFunc: params.props.stateFunc,
+  };
+
   return (
     <>
       {/* API NAME AND DELETE BUTTON*/}
@@ -23,7 +29,7 @@ function ApiItem(params) {
       </div>
       <button
         onClick={() => {
-          DeleteApiData(`${Urls.baseApi}/${params.props.apiItem.id}`);
+          DeleteApiData(deleteProps);
         }}
       >
         Delete
