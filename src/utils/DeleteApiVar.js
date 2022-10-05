@@ -1,9 +1,9 @@
 function DeleteApiVar(params) {
-  let newData = params.props.stateVar.filter((item) => {
-    return item.id !== params.props.id;
+  let newData = params.stateVar.filter((item) => {
+    return item.id !== params.id;
   });
 
-  params.props.stateFunc(newData);
+  params.stateFunc(newData);
 }
 
 export default DeleteApiVar;
