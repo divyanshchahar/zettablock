@@ -1,4 +1,4 @@
-function DeleteApiData(params) {
+function DeleteCall(params) {
   // console.log(params);
   fetch(params, {
     method: "DELETE",
@@ -6,4 +6,4 @@ function DeleteApiData(params) {
   }).then((res) => console.log(res));
 }
 
-export default DeleteApiData;
+export default DeleteCall;
