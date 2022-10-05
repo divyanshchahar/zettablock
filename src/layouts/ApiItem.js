@@ -30,7 +30,6 @@ function ApiItem(params) {
       <button
         onClick={() => {
           DeleteApiData(deleteProps);
-          console.log("clicked");
         }}
       >
         Delete
