@@ -27,7 +27,7 @@ function MainPage() {
   return (
     <>
       <SortingMenu props={sortingPropArgs} />
-      <ApiList props={`${Urls.baseApi}${sorting}`} />
+      <ApiList props={`${Urls.baseApi}${sorting}${page}`} />
       <Pagination props={pagePropArgs} />
     </>
   );
