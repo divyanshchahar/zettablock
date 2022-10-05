@@ -1,27 +1,24 @@
-//IMPORTING ASSETS
-import Urls from "../assets/Urls";
-
 function Pagination(params) {
   function handleClick(param) {
     switch (param) {
       case "1":
-        params.props.changePage(Urls.p1);
+        params.props.pageFunc(params.props.pageOptions.p1);
         break;
 
       case "2":
-        params.props.changePage(Urls.p2);
+        params.props.pageFunc(params.props.pageOptions.p2);
         break;
 
       case "3":
-        params.props.changePage(Urls.p3);
+        params.props.pageFunc(params.props.pageOptions.p3);
         break;
 
       case "4":
-        params.props.changePage(Urls.p4);
+        params.props.pageFunc(params.props.pageOptions.p4);
         break;
 
       case "5":
-        params.props.changePage(Urls.p5);
+        params.props.pageFunc(params.props.pageOptions.p5);
         break;
 
       default:
